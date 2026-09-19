@@ -1,0 +1,25 @@
+class person {
+    String name;
+    int age;
+
+    person(String name,int age){
+        this.name=name;
+        this.age=age;
+    }
+}
+
+class Data extends person{
+    Data(String name,int age){
+        super(name, age);
+    }
+    void display(){
+        System.out.println(name);
+        System.out.println(age);
+    }
+}
+public class SuperKey {
+    public static void main(String[] args) {
+      Data d=new Data("Nivash", 21);
+        d.display();
+    }
+}
