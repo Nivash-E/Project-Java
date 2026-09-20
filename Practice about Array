@@ -1,0 +1,23 @@
+import java.util.*;
+public class Array {
+    public static void main (String[] args){
+        Scanner sc= new Scanner(System.in);
+
+
+        int size=sc.nextInt();
+        int[] marks=new int[size];
+
+        for(int i=0;i<size;i++){
+            marks[i]=sc.nextInt();
+        }
+        if(size%2==0){
+            int middle1=size/2-1;
+            int middle2=size/2;
+            System.out.println("middle Elements :"+marks[middle1]+" "+marks[middle2]);
+        }
+        else{
+            int middle=size/2;
+            System.out.println("middle element"+marks[middle]);
+        }
+    }
+}
