@@ -1,0 +1,64 @@
+abstract class Vehical{
+    
+    final void startengine(){
+        System.out.println("Emgine Started");
+    }
+    static String getVenhicalType(){
+        return "BMW";
+    }
+    abstract void drive();
+
+}
+class Car extends Vehical{
+    String owner;
+
+    Car(String name){
+        this.owner=name;
+    }
+    @Override 
+    void drive(){
+        System.out.println("Driving a car");
+    }
+}
+class bike extends Car{
+    String ownerr;
+
+    bike(String ownerr){
+        super("Thiru");
+        this.ownerr=ownerr;
+    }
+    static String getname(){
+        return "Honda";
+    }
+    @Override 
+    void drive(){
+        System.out.println("Driving a Bike");
+    }
+}
+
+
+public class finall {
+    static void First(){
+        System.out.println("Static is inside the main class  ");
+    }
+    public static void main(String[] args){
+        
+        First();
+        
+        bike b1=new bike("Nivash");
+        b1.startengine();
+        Car c1=new Car("Thiru");
+        System.out.println(Vehical.getVenhicalType());
+        System.out.println("Car owner is :"+c1.owner);
+        c1.drive();
+        
+        
+        System.out.println(bike.getname());
+        System.out.println("Bike owner is :"+b1.ownerr);
+        b1.drive();
+       
+        
+        
+        
+    }
+}
