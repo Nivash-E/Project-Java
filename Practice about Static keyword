@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+class Student{
+    String name;
+    int age=21;
+    static String Teacher="Ram";
+
+    static void disp(){
+        System.out.println("Good Static is Working");
+    }
+}
+
+class Data extends Student{
+    static int RollNum;
+    Data(String name,int age,int RollNum){
+        this.name=name;
+        this.age=age;
+        this.RollNum=RollNum;
+    }
+}
+class num extends Data{
+    static int passout;
+    num(String name,int age,int RollNum){
+        super(name,age,RollNum);
+    }
+}
+
+public class Static {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+
+        num n1=new num("Nivash", 21, 23034567);
+
+        System.out.println("Student name :"+n1.name);
+        System.out.println("Student age :"+n1.age);
+
+        num.Teacher="Mani";
+
+        System.out.println("Teacher name :"+num.Teacher);
+        
+        Student.disp();
+
+        System.out.println("Student RollNum :"+num.RollNum);
+
+        num.passout=2027;
+        System.out.println("Student passout year :"+num.passout);
+
+    }
+}
