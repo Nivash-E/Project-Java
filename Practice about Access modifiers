@@ -1,0 +1,33 @@
+
+package package_one;
+
+public class student2 {
+	protected int number=400;
+}
+
+// package one is protected values???????
+
+package package_two;
+
+public class Teacher {
+	public int salery=1000;
+}
+
+//package 2 is public values?????????
+
+package package_one;
+
+import package_two.Teacher;
+
+public class student extends Teacher {
+	public static void main(String[] args) {
+		student s1=new student();
+		System.out.println(s1.salery);
+		
+		student2 s2=new student2();
+		System.out.println(s2.number);
+		
+	
+	}
+}
+//access the protected  and public  in another file...?????
