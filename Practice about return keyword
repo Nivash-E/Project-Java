@@ -1,0 +1,21 @@
+public class Try {
+    String passorfail(int a){
+        if(a>=35){
+                return "pass";
+        }
+        else{
+                return "Fail";
+        }
+    }
+
+    public static void main(String[] args) {
+         Scanner sc=new Scanner(System.in);
+        int a=sc.nextInt();
+
+        Try t=new Try();
+
+        String total=t.passorfail(a);
+        System.out.println(total);
+        
+    }
+}
