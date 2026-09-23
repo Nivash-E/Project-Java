@@ -1,0 +1,25 @@
+import java.util.*;
+
+public class ExceptionHandle {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        try{
+        int a=sc.nextInt();
+        int b=a/0;
+        
+        }
+        catch(InputMismatchException e){
+            System.out.println(e);
+        }
+        catch(ArithmeticException e){
+            System.out.println(e);
+        }
+        System.out.println("Program ended");
+    }
+}
+
+OUTPUT???????
+
+12
+java.lang.ArithmeticException: / by zero
+Program ended
