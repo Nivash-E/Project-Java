@@ -16,6 +16,7 @@ public class finallyy {
         String names="Nivash";
           try{
             end e1=new end("Nivash");
+            e1.ready();
           }
           catch(Exception e){
             System.out.println(e);
