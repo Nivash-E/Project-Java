@@ -1,0 +1,32 @@
+ abstract class Start{
+    abstract void ready();
+}
+class end extends Start{
+    String name;
+    end(String name){
+        this.name=name;
+    }
+    void ready(){
+        System.out.println("Working");
+    }
+}
+
+public class finallyy {
+    public static void main(String[] args){
+        String names="Nivash";
+          try{
+            end e1=new end("Nivash");
+          }
+          catch(Exception e){
+            System.out.println(e);
+          }
+          finally{
+            if(names.equals("Nivash")){
+                System.out.println("name is True");
+            }
+            else{
+                System.out.println("Not true");
+            }
+          }
+    }
+}
